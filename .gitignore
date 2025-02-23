@@ -199,3 +199,5 @@ pyrightconfig.json
 
 kubernetes/kubeconfig.yaml
 kubeconfig.yaml
+
+claim.tar
