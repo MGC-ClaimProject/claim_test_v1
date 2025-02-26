@@ -1,7 +1,8 @@
 # common/exceptions.py
 
-from rest_framework.exceptions import APIException
 from common.logging_config import logger
+from rest_framework.exceptions import APIException
+
 
 class CustomAPIException(APIException):
     """기본 Custom API Exception 클래스"""

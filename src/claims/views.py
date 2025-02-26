@@ -1,5 +1,3 @@
-from rest_framework.views import APIView
-
 from claims.models import AddDocument, Claim
 from claims.serializers import ClaimAddDocumentSerializer, ClaimSerializer
 from drf_spectacular.utils import extend_schema, extend_schema_view
@@ -11,6 +9,7 @@ from rest_framework.generics import (ListAPIView, ListCreateAPIView,
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from utils.fax_converter import convert_to_fax_tiff  # ✅ 팩스 변환 모듈 가져오기
 
 

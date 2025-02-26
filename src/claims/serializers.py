@@ -26,5 +26,3 @@ class ClaimSerializer(serializers.ModelSerializer):
         model = Claim
         fields = "__all__"  # ✅ 모든 필드 포함
         read_only_fields = ("id",)
-
-

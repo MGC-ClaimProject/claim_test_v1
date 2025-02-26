@@ -4,7 +4,7 @@ services:
     container_name: db
     restart: always
     env_file:
-      - prod.env
+      - ${MODE}.env
     environment:
       POSTGRES_DB: claim
     ports:
@@ -31,7 +31,7 @@ services:
       redis:
         condition: service_started
     env_file:
-      - prod.env
+      - ${MODE}.env
     expose:
       - "8000"
     ports:

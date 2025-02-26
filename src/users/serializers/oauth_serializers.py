@@ -86,7 +86,6 @@ class KakaoAuthCodeSerializer(serializers.Serializer):
         logger.debug(f"Payload: {payload}")
         logger.debug(f"Headers: {headers}")
 
-
         response = requests.post(token_url, data=payload, headers=headers)
         data = response.json()
         logger.debug(f"Response Status Code: {response.status_code}")
@@ -160,10 +159,10 @@ class KakaoAuthCodeSerializer(serializers.Serializer):
         if not member:
             member = Member.objects.create(
                 user=user,
-                name=kakao_data.get("name", ""),
-                phone=kakao_data.get("phone", ""),
-                birth=kakao_data.get("birth", ""),
-                gender=kakao_data.get("gender", "unknown"),
+                name=kakao_data.get("name", "고객"),
+                phone=kakao_data.get("phone", "000"),
+                birth=kakao_data.get("birth", "2000-01-01"),
+                gender=kakao_data.get("gender", "Male"),
                 relation="Self",
             )
 
@@ -195,7 +194,6 @@ class KakaoAuthCodeSerializer(serializers.Serializer):
 
         # 5️⃣ JWT 토큰 발급
         tokens = self.create_tokens(user)
-
 
         return {
             "access_token": tokens["access_token"],

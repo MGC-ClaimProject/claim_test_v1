@@ -1,6 +1,6 @@
 from common.constants.choices import (INSURANCE_COMPANY_CHOICES,
-                    INSURANCE_TYPE_CHOICES,
-                    POLICY_STATUS_CHOICES)
+                                      INSURANCE_TYPE_CHOICES,
+                                      POLICY_STATUS_CHOICES)
 from django.db import models
 from members.models import Member
 
