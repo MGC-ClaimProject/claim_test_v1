@@ -1,6 +1,7 @@
 from claims.views import (ClaimAddDocumentConvertFaxView,
-                    ClaimAddDocumentEditFaxView, ClaimDetailDestroyView,
-                    ClaimListCreateView, ClaimListUserView, ClaimSendView)
+                          ClaimAddDocumentEditFaxView, ClaimDetailDestroyView,
+                          ClaimListCreateView, ClaimListUserView,
+                          ClaimSendView)
 from django.urls import path
 
 app_name = "claims"

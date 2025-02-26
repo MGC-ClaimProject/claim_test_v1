@@ -1,6 +1,6 @@
 from django.urls import path
 from users.views.oauth_views import (KakaoLoginCallbackView, LogoutView,
-                         RefreshAccessTokenAPIView)
+                                     RefreshAccessTokenAPIView)
 
 app_name = "users"
 urlpatterns = [

@@ -1,0 +1,6 @@
+scripts/
+src/media/
+.gitignore
+.git
+claim.tar
+README.md

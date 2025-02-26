@@ -16,7 +16,7 @@ from rest_framework_simplejwt.token_blacklist.models import (BlacklistedToken,
 from rest_framework_simplejwt.tokens import AccessToken, RefreshToken
 from users.models import User
 from users.serializers.oauth_serializers import (KakaoAuthCodeSerializer,
-                   SocialLoginSerializer)
+                                                 SocialLoginSerializer)
 
 logger = logging.getLogger("custom_api_logger")
 
@@ -161,5 +161,7 @@ class LogoutView(APIView):
         response = Response(
             {"detail": "로그아웃에 성공했습니다."}, status=status.HTTP_200_OK
         )
-        response.delete_cookie("refresh_token", path="/", domain=settings.SESSION_COOKIE_DOMAIN)
+        response.delete_cookie(
+            "refresh_token", path="/", domain=settings.SESSION_COOKIE_DOMAIN
+        )
         return response

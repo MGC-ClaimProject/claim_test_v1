@@ -201,3 +201,7 @@ kubernetes/kubeconfig.yaml
 kubeconfig.yaml
 
 claim.tar
+
+scripts/*
+media/claim_documents/*
+frontend/*

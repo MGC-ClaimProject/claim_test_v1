@@ -1,7 +1,5 @@
 from decimal import Decimal
 
-
-
 STATUS_CHOICES = [
     ("Pending", "보류중"),
     ("In Progress", "진행중"),

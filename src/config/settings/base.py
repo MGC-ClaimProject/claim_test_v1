@@ -111,7 +111,6 @@ SESSION_COOKIE_SAMESITE = "Lax"  # ✅ 프론트엔드와 백엔드 간 쿠키 �
 CSRF_COOKIE_SECURE = False  # HTTPS 환경에서는 True
 
 
-
 ROOT_URLCONF = "config.urls"
 
 # STATICFILES_DIRS = [
